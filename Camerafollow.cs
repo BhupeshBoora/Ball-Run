@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class Camerafollow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
     public Transform player;
     public Vector3 offset;
-    // Update is called once per frame
+    
     void Update()
     {
         transform.position = player.position + offset;
+        // "offset" here will decide how far on your camera is placed from the player on each axis
+        
     }
-
-  
 }
