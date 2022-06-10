@@ -4,7 +4,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class Playermovement : MonoBehaviour
 {  
 
-    Rigidbody rb;              
+    public Rigidbody rb;              
     public float speed = 10f;
 
     // // // // // //
