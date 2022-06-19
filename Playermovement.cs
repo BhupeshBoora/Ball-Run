@@ -23,10 +23,18 @@ public class Playermovement : MonoBehaviour
         // // // // // //
 
         // Code for left and right movement:
-        float x = CrossPlatformInputManager.GetAxisRaw("Horizontal");      //To get input from player's keyboard
         
-        Vector3 moveby = transform.right * x * Time.deltaTime;
-        rb.MovePosition(transform.position + moveby.normalized * speed * Time.deltaTime);  //To move the rigidbody(rb) on input
+        if(Input.GetKeyDown("d"))                               //To get input from player's keyboar
+        {
+           rb.addForce(100 * Time.deltaTime, 0, 0);
+        }
+        
+        if(Input.GetKeyDown("a"))                               //To get input from player's keyboar
+        {
+           rb.addForce(-100 * Time.deltaTime, 0, 0);
+        }
+        
+         //To move the rigidbody(rb) on input
 
     }
 
